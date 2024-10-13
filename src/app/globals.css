@@ -1,0 +1,223 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.body {
+  display: flex;
+}
+
+.main-container {
+  background-color: #F2F3AE; /* Lightest shade for background */
+  min-height: 100vh;
+  padding-top: 100px; 
+  padding-bottom: 100px; 
+  overflow-y: auto;
+}
+
+.header {
+  font-family: cursive;
+  text-align: center;
+  padding: 20px;
+  background-color: #3C1518; /* Darkest color for the header */
+  color: #F2F3AE; /* Light color for text contrast */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header h1 {
+  color: #D58936; /* Accent color */
+  font-size: 30px;
+}
+
+.header p {
+  color: #A44200; /* Warm secondary color */
+  font-size: 15px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: left;
+  padding: 20px;
+  background-color: #3C1518; /* Same as header for consistency */
+  color: #F2F3AE; /* Light contrast for footer text */
+  z-index: 1000;
+}
+
+.footer h1 {
+  color: #D58936; /* Accent color for footer heading */
+  font-size: 20px;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  gap: 20px; 
+  padding: 0 50px; 
+}
+
+.social-icons img {
+  transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.social-icons img:hover {
+  
+  transform: scale(1.2); 
+}
+
+.blogs-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+}
+
+.blog-card {
+  background-color: #F3EFE0; 
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out, background-color 0.9s ease-in-out;
+}
+
+.blogs-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+}
+
+.blog-card {
+  background-color: #F2F3AE; /* Lightest background for cards */
+  border: 2px solid #69140E; /* Border using one of the warm tones */
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out, background-color 0.9s ease-in-out;
+}
+
+.blog-card:hover {
+  transform: translateY(-10px);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 15px, rgba(0, 0, 0, 0.3) 0px 10px 20px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.blog-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #69140E; /* Dark warm color for titles */
+}
+
+.blog-text {
+  font-size: 14px;
+  margin: 10px 0;
+  color: #A44200; /* Warm secondary for text */
+}
+
+.read-more {
+  background-color: #D58936; /* Accent color for button */
+  color: #F2F3AE; /* Light text */
+  border: none;
+  padding: 10px 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.read-more:hover {
+  background-color: #69140E; /* Darker tone for hover effect */
+}
+
+@media (max-width: 1200px) {
+  .blogs-container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 992px) {
+  .blog-card {
+    width: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    padding-left: 20px;
+    font-size: 24px;
+  }
+
+  .footer h1 {
+    font-size: 18px;
+  }
+
+  .blogs-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blog-card {
+    width: 80%; 
+    margin-bottom: 20px; 
+  }
+}
+
+@media (max-width: 576px) {
+  .header h1 {
+    font-size: 22px;
+  }
+
+  .footer h1 {
+    font-size: 16px;
+  }
+
+  .blog-card {
+    width: 90%;
+  }
+
+  .read-more {
+    padding: 8px 16px; 
+  }
+
+  .blog-title {
+    font-size: 18px; 
+  }
+
+  .blog-text {
+    font-size: 12px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .footer h1 {
+    font-size: 14px; 
+  }
+
+  .read-more {
+    padding: 6px 12px; 
+  }
+
+  .blog-title {
+    font-size: 16px; 
+  }
+
+  .blog-text {
+    font-size: 10px; 
+  }
+}
